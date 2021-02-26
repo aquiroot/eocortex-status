@@ -15,12 +15,10 @@ export const getEvents = async () => {
 	return await fetch(
 		`http://10.21.1.13:8080/event?login=root&password=${password}&responsetype=json`,
 		{
-			headers: { 'Content-Type': 'application/json' },
+			mode: 'no-cors',
 		}
-	)
-		.then((res) => res.json())
-		.then((res) => {
-			console.log(res);
-			return res;
-		});
+	).then((res) => {
+		console.log(res.body);
+		return res;
+	});
 };

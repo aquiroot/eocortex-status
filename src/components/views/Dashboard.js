@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { getEvents } from '../../helpers/fetch';
+import { Main } from '../Main';
+import { NavBar } from '../NavBar';
 
 export const Dashboard = () => {
 	const n = 10;
@@ -7,9 +9,11 @@ export const Dashboard = () => {
 	useEffect(() => {
 		getEvents();
 	}, [n]);
+
 	return (
-		<div>
-			<h2>dashboard</h2>
-		</div>
+		<>
+			<NavBar />
+			<Main />
+		</>
 	);
 };
