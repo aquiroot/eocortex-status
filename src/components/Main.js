@@ -1,9 +1,10 @@
 import React from 'react';
+import { Card } from './common/Card';
 
 export const Main = () => {
 	return (
-		<div>
-			<h4>main</h4>
+		<div className="container">
+			<Card />
 		</div>
 	);
 };

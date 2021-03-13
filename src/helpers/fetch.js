@@ -1,3 +1,5 @@
+import { ajax } from 'rxjs/ajax';
+
 const password = process.env.REACT_APP_API_PASSWORD;
 
 export const getConfig = async () => {
@@ -6,7 +8,6 @@ export const getConfig = async () => {
 	)
 		.then((res) => res.json())
 		.then((res) => {
-			console.log(res);
 			return res;
 		});
 };
@@ -22,3 +23,7 @@ export const getEvents = async () => {
 		return res;
 	});
 };
+
+export const getEvents$ = ajax.getJSON(
+	`http://10.21.1.13:8080/configex?responsetype=json&login=root&password=${password}`
+);

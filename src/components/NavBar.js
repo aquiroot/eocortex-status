@@ -2,9 +2,11 @@ import React from 'react';
 
 export const NavBar = () => {
 	return (
-		<nav className="navbar navbar-dark bg-dark">
+		<nav className="navbar navbar-dark bg-dark mb-3">
 			<div className="container-fluid">
-				<span className="navbar-brand">Navbar</span>
+				<span href="!#" className="navbar-brand">
+					Navbar
+				</span>
 				<form className="d-flex">
 					<input
 						className="form-control me-2"
