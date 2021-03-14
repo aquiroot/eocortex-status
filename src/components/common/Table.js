@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getConfig } from '../../helpers/fetch';
 
-export const Card = () => {
+export const Table = () => {
 	const [data, setData] = useState();
 
 	useEffect(() => {
@@ -9,7 +9,7 @@ export const Card = () => {
 	}, []);
 
 	return (
-		<table className="table">
+		<table className="table table-striped">
 			<thead>
 				<tr>
 					<th scope="col">#</th>
